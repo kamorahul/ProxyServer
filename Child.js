@@ -13,7 +13,7 @@ var MAPPINGS = {
 }
 
 proxy.on('error', function (err, req, res) {
-    maintainErrorLogs(err, req, res);
+    res.end("Something Goes Worng With Proxy Server with Error Message" +err.message);
 });
 
 proxy.on('proxyReq', function(proxyReq, req, res, options) {
